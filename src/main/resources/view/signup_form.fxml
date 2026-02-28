@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="400.0" style="-fx-background-color: #f4f4f4;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SignUpFormController">
+    <children>
+        <Rectangle arcHeight="15.0" arcWidth="15.0" fill="WHITE" height="460.0" layoutX="20.0" layoutY="20.0" stroke="#d9d9d9" strokeType="INSIDE" width="360.0" />
+
+        <Label layoutX="140.0" layoutY="40.0" text="Sign Up">
+            <font>
+                <Font name="System Bold" size="32.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="123.0" layoutY="87.0" text="Create a new account" textFill="#6b6b6b">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Label>
+
+        <JFXTextField fx:id="txtFullName" focusColor="#1e293b" layoutX="60.0" layoutY="140.0" prefHeight="30.0" prefWidth="280.0" promptText="Full Name" />
+
+        <JFXTextField fx:id="txtEmail" focusColor="#1e293b" layoutX="60.0" layoutY="190.0" prefHeight="30.0" prefWidth="280.0" promptText="Email Address" />
+
+        <JFXTextField fx:id="txtUsername" focusColor="#1e293b" layoutX="60.0" layoutY="240.0" prefHeight="30.0" prefWidth="280.0" promptText="Username *" />
+
+        <JFXPasswordField fx:id="txtPassword" focusColor="#1e293b" layoutX="60.0" layoutY="290.0" prefHeight="30.0" prefWidth="280.0" promptText="Password *" />
+
+        <JFXComboBox fx:id="cmbRole" focusColor="#1e293b" layoutX="60.0" layoutY="340.0" prefHeight="30.0" prefWidth="280.0" promptText="Select Role *" />
+
+        <JFXButton layoutX="60.0" layoutY="395.0" onAction="#btnRegisterOnAction" prefHeight="35.0" prefWidth="280.0" style="-fx-background-color: #1e293b;" text="REGISTER" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </JFXButton>
+
+        <Label fx:id="lblBackToLogin" layoutX="108.0" layoutY="445.0" onMouseClicked="#lblBackToLoginOnMouseClicked" text="Already have an account? Log In" textFill="#1e293b" underline="true">
+            <font>
+                <Font size="13.0" />
+            </font>
+            <cursor>
+                <javafx.scene.Cursor fx:constant="HAND" />
+            </cursor>
+        </Label>
+    </children>
+</AnchorPane>

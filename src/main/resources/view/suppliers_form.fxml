@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="722.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SupplierFormController">
+   <children>
+      <Label layoutX="36.0" layoutY="26.0" text="SUPPLIERS">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d9d9d9" height="32.0" layoutX="375.0" layoutY="105.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="307.0" />
+      <TextField fx:id="txtSearchMenu" layoutX="405.0" layoutY="109.0" prefHeight="27.0" prefWidth="257.0" promptText="Search menu" style="-fx-background-color: #d9d9d9;">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+      <ImageView fitHeight="17.0" fitWidth="16.0" layoutX="387.0" layoutY="115.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/search.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="64.0" layoutY="130.0" text="Input Form">
+         <font>
+            <Font name="Imprint MT Shadow" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="8.0" layoutY="198.0" prefHeight="27.0" prefWidth="81.0" text="Supplier ID:">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="8.0" layoutY="238.0" prefHeight="27.0" prefWidth="123.0" text="Supplier Name:">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="8.0" layoutY="329.0" prefHeight="27.0" prefWidth="135.0" text="Phone No:">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="8.0" layoutY="373.0" prefHeight="27.0" prefWidth="81.0" text="Email:">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtSupplierId" layoutX="109.0" layoutY="192.0" opacity="0.56" promptText="eg : 1" />
+      <JFXTextField fx:id="txtPhoneNo" layoutX="110.0" layoutY="326.0" opacity="0.56" />
+      <TableView fx:id="tblSuppliers" layoutX="253.0" layoutY="158.0" prefHeight="200.0" prefWidth="462.0">
+         <columns>
+            <TableColumn fx:id="colSupplierId" prefWidth="18.0" text="ID" />
+            <TableColumn fx:id="colSupplierName" prefWidth="102.0" text="Supplier Name" />
+            <TableColumn fx:id="colContactPerson" prefWidth="92.33331298828125" text="Contact Person" />
+            <TableColumn fx:id="colPhoneNo" prefWidth="72.0" text="Phone" />
+            <TableColumn fx:id="colEmail" prefWidth="83.0" text="Email" />
+            <TableColumn fx:id="colAddress" prefWidth="94.0" text="Address" />
+         </columns>
+      </TableView>
+      <JFXButton layoutX="41.0" layoutY="517.0" onAction="#btnAddOnAction" prefHeight="27.0" prefWidth="84.0" style="-fx-background-color: #27ae60;" text="Add" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="132.0" layoutY="517.0" onAction="#btnUpdateOnAction" prefHeight="27.0" prefWidth="84.0" style="-fx-background-color: #f39c12;" text="Update" textFill="#e9e4e4">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="224.0" layoutY="516.0" onAction="#btnDeleteOnAction" prefHeight="27.0" prefWidth="84.0" style="-fx-background-color: #c0392b;" text="Delete" textFill="#e9e4e4">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="316.0" layoutY="515.0" onAction="#btnSearchOnAction" prefHeight="27.0" prefWidth="84.0" style="-fx-background-color: #008CBA;" text="Search" textFill="#e9e4e4">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="txtName" layoutX="111.0" layoutY="232.0" opacity="0.56" />
+      <JFXTextField fx:id="txtEmail" layoutX="109.0" layoutY="371.0" opacity="0.56" prefHeight="25.0" prefWidth="238.0" />
+      <Label layoutX="8.0" layoutY="285.0" prefHeight="27.0" prefWidth="123.0" text="Contact Person:">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtContactPerson" layoutX="111.0" layoutY="280.0" opacity="0.56" />
+      <Label layoutX="9.0" layoutY="418.0" prefHeight="27.0" prefWidth="81.0" text="Address:">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtAddress" layoutX="110.0" layoutY="412.0" opacity="0.56" prefHeight="25.0" prefWidth="238.0" />
+      <JFXButton layoutX="405.0" layoutY="514.0" onAction="#btnClearOnAction" prefHeight="27.0" prefWidth="84.0" style="-fx-background-color: #808080;" text="Clear" textFill="#e9e4e4">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
