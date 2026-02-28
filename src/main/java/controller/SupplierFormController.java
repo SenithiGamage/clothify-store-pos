@@ -72,16 +72,28 @@ public class SupplierFormController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         colSupplierId.setCellValueFactory(new PropertyValueFactory<>("supplierId"));
         colSupplierName.setCellValueFactory(new PropertyValueFactory<>("supplierName"));
-        colContactPerson.setCellValueFactory(new PropertyValueFactory<>("ContactPerson"));
-        colPhoneNo.setCellValueFactory(new PropertyValueFactory<>("Phone"));
-        colEmail.setCellValueFactory(new PropertyValueFactory<>("Email"));
-        colAddress.setCellValueFactory(new PropertyValueFactory<>("Address"));
+        colContactPerson.setCellValueFactory(new PropertyValueFactory<>("contactPerson"));
+        colPhoneNo.setCellValueFactory(new PropertyValueFactory<>("phone"));
+        colEmail.setCellValueFactory(new PropertyValueFactory<>("email"));
+        colAddress.setCellValueFactory(new PropertyValueFactory<>("address"));
 
         loadTableData();
 
         tblSuppliers.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
             if (newValue != null) {
-                populateFields((Supplier) newValue);
+                SupplierTM selectedRow = (SupplierTM) newValue;
+
+                Supplier supplier = new Supplier(
+                        selectedRow.getSupplierId(),
+                        selectedRow.getSupplierName(),
+                        selectedRow.getContactPerson(),
+                        selectedRow.getPhone(),
+                        selectedRow.getEmail(),
+                        selectedRow.getAddress()
+                );
+
+                // 3. Now pass the valid Supplier to your method!
+                populateFields(supplier);
             }
         });
     }

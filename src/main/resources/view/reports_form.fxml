@@ -5,7 +5,6 @@
 <?import javafx.scene.chart.CategoryAxis?>
 <?import javafx.scene.chart.LineChart?>
 <?import javafx.scene.chart.NumberAxis?>
-<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
@@ -18,24 +17,12 @@
             <Font name="System Bold" size="27.0" />
          </font>
       </Label>
-      <Label layoutX="119.0" layoutY="95.0" text="From Date">
+      <Label layoutX="105.0" layoutY="110.0" text="Report Type">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </Label>
-      <Label layoutX="332.0" layoutY="95.0" text="To Date">
-         <font>
-            <Font name="System Bold" size="15.0" />
-         </font>
-      </Label>
-      <Label layoutX="540.0" layoutY="95.0" text="Report Type">
-         <font>
-            <Font name="System Bold" size="15.0" />
-         </font>
-      </Label>
-      <DatePicker layoutX="69.0" layoutY="126.0" />
-      <DatePicker layoutX="287.0" layoutY="126.0" />
-      <JFXComboBox layoutX="528.0" layoutY="125.0" onAction="#cmbReportType" prefHeight="25.0" prefWidth="134.0" promptText="Report Type" />
+      <JFXComboBox fx:id="cmbReportType" layoutX="226.0" layoutY="108.0" prefHeight="25.0" prefWidth="239.0" promptText="Report Type" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c6d3e8" height="101.0" layoutX="136.0" layoutY="190.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="106.0" />
       <Label layoutX="160.0" layoutY="214.0" text="Total">
          <font>
